@@ -1,0 +1,22 @@
+API:
+POST login
+POST registration
+
+GET user
+GET drinks
+POST drinks/add
+DELETE drinks/remove
+
+--------------------------------------------------------------
+
+DB:
+- users [id, name, email, password, create_at, updated_at]
+- drinks [id, name, caffeine, create_at, updated_at]
+- consumption [id, user_id, drink_id, create_at, updated_at, delete_at]
+
+--------------------------------------------------------------
+
+Views:
+- login
+- registration
+- data-entry-page
