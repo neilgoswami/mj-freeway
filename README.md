@@ -17,8 +17,8 @@
 ## Screenshots
 
 <div>
-    <img src="https://user-images.githubusercontent.com/1276993/130391547-1d740ef6-5e89-40cb-bd31-fa2075c7dbb2.jpg" alt="Login Page" align="left" width="350">
-    <img src="https://user-images.githubusercontent.com/1276993/130391645-975ec238-cda5-44bf-80d0-0b6fd86d7c45.jpg" alt="Sign Up Page" align="right" width="350">
+    <img src="https://user-images.githubusercontent.com/1276993/130391547-1d740ef6-5e89-40cb-bd31-fa2075c7dbb2.jpg" alt="Login Page" align="left" width="450">
+    <img src="https://user-images.githubusercontent.com/1276993/130391645-975ec238-cda5-44bf-80d0-0b6fd86d7c45.jpg" alt="Sign Up Page" align="right" width="450">
 </div>
 
 <div>
