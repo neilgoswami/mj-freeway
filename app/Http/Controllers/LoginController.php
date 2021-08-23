@@ -19,7 +19,7 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-        $response = Http::post(Config::get('app.url') . 'login', [
+        $response = Http::post(Config::get('app.url') . 'api/login', [
             'email' => $request->email,
             'password' => $request->password
         ]);

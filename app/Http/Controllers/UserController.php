@@ -10,7 +10,7 @@ class UserController extends Controller
 {
     public function logout(Request $request)
     {
-        Http::withToken(session('token'))->get(Config::get('app.url') . 'logout');
+        Http::withToken(session('token'))->get(Config::get('app.url') . 'api/logout');
 
         $request->session()->flush();
 
@@ -19,13 +19,13 @@ class UserController extends Controller
 
     public function dashboard()
     {
-        $drinksResponse = Http::withToken(session('token'))->get(Config::get('app.url') . 'user/drinks');
+        $drinksResponse = Http::withToken(session('token'))->get(Config::get('app.url') . 'api/user/drinks');
         if ($drinksResponse->failed()) {
             return redirect()->route('login');
         }
         $drinks = $drinksResponse->json()['data'];
 
-        $consumptionResponse = Http::withToken(session('token'))->get(Config::get('app.url') . 'user/consumptions');
+        $consumptionResponse = Http::withToken(session('token'))->get(Config::get('app.url') . 'api/user/consumptions');
         if ($consumptionResponse->failed()) {
             return redirect()->route('login');
         }
@@ -36,7 +36,7 @@ class UserController extends Controller
 
     public function addConsumption(Request $request)
     {
-        $response = Http::withToken(session('token'))->post(Config::get('app.url') . 'user/consumptions/add', ["drink" => $request->id]);
+        $response = Http::withToken(session('token'))->post(Config::get('app.url') . 'api/user/consumptions/add', ["drink" => $request->id]);
 
         if ($response->failed()) {
             return redirect()->route('login');

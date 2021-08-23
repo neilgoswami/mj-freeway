@@ -15,7 +15,7 @@ class SignupController extends Controller
 
     public function register(Request $request)
     {
-        $response = Http::post(Config::get('app.url') . 'signup', [
+        $response = Http::post(Config::get('app.url') . 'api/signup', [
             'name' => $request->name,
             'email' => $request->email,
             'password' => $request->password,
