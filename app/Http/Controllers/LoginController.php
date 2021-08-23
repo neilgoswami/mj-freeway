@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 
 class LoginController extends Controller
@@ -18,7 +19,7 @@ class LoginController extends Controller
 
     public function authenticate(Request $request)
     {
-        $response = Http::post(API_URL . 'login', [
+        $response = Http::post(Config::get('app.url') . 'login', [
             'email' => $request->email,
             'password' => $request->password
         ]);

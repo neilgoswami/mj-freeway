@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Http;
 
 class SignupController extends Controller
@@ -14,7 +15,7 @@ class SignupController extends Controller
 
     public function register(Request $request)
     {
-        $response = Http::post(API_URL . 'signup', [
+        $response = Http::post(Config::get('app.url') . 'signup', [
             'name' => $request->name,
             'email' => $request->email,
             'password' => $request->password,
